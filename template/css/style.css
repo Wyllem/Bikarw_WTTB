@@ -37,7 +37,6 @@
 
 .trait
 {
-background-color: yellow;
-height: 5pt;
-width: 150px;
+    border-top : 5px solid #c69316; 
+    margin-top: 50px;
 }
