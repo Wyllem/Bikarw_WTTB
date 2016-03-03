@@ -41,8 +41,8 @@ jQuery(function($) {
 		var rangeTop    =   200;
 		var rangeBottom =   500;
 		$('.navbar-collapse').find('.scroll a').each(function(){
-			contentTop.push( $( $(this).attr('href') ).offset().top);
-			contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
+			contentTop.push( $( $(this).attr('href') ).offset());
+			contentBottom.push( $( $(this).attr('href') ).offset() + $( $(this).attr('href') ).height() );
 		})
 		$.each( contentTop, function(i){
 			if ( winTop > contentTop[i] - rangeTop ){
@@ -144,18 +144,26 @@ jQuery(function($) {
 			scrollwheel: false,
 			center: myLatlng
 		};
-		var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-		var contentString = '';
-		var infowindow = new google.maps.InfoWindow({
-			content: '<div class="map-content"><ul class="address">' + $('.address').html() + '</ul></div>'
-		});
-		var marker = new google.maps.Marker({
-			position: myLatlng,
-			map: map
-		});
-		google.maps.event.addListener(marker, 'click', function() {
-			infowindow.open(map,marker);
-		});
+		//location of the club
+		var inoxClub = {"lat":43.651975, "lng":1.420669};
+		// Setting to build the map
+		var mapSetting = {
+			"zoom": 14,
+			"center": inoxClub
+		};
+	
+		var map = new google.maps.Map(document.getElementById('google-map'), mapSetting);
+		// var contentString = '';
+		// var infowindow = new google.maps.InfoWindow({
+		// 	content: '<div class="map-content"><ul class="address">' + $('.address').html() + '</ul></div>'
+		// });
+		// var marker = new google.maps.Marker({
+		// 	position: myLatlng,
+		// 	map: map
+		// });
+		// google.maps.event.addListener(marker, 'click', function() {
+		// 	infowindow.open(map,marker);
+		// });
 	}
 	google.maps.event.addDomListener(window, 'load', initialize_map);
 	
