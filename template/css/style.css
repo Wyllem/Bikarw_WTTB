@@ -1,0 +1,43 @@
+.style_prevu_kit
+{
+    /*padding-left: 50px;*/
+    display:inline-block;
+    border-radius:100%;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+}
+.style_prevu_kit:hover
+{
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+}
+
+#party-choice img {
+    width: 100%;
+    height: 100%;
+}
+
+#party-choice .col-sm-2 {
+    margin-right: 10px;
+}
+
+.trait
+{
+background-color: yellow;
+height: 5pt;
+width: 150px;
+}
