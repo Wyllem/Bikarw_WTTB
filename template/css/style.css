@@ -40,3 +40,23 @@
     border-top : 5px solid #c69316; 
     margin-top: 50px;
 }
+
+div.footer-bottom {
+    background-color: #000000 !important ;
+}
+
+#partenaire-container > ul, #contact-container > ul {
+    list-style: none;
+    margin-left:0;
+    padding-left:0;
+    font-size: 1em; 
+    line-height: 33px;
+}
+
+#contact-container {
+    color: #FFD160
+}
+
+#partenaire-container {
+    color: #c69316
+}
