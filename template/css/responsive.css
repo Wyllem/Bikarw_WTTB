@@ -34,6 +34,18 @@
 
 /* xs */
 @media (max-width: 767px) {
+	#party-choice .col-xs-6 {
+		margin-top: 88px;
+	}
+
+	#party-choice .col-xs-6:nth-last-child(1) {
+		margin-bottom: 44px;
+	}
+
+	#party-choice img {
+		width: 90% !important;
+	}
+
 	body {
 		font-size: 14px;
 	}
@@ -228,3 +240,8 @@
 	}
 }
 
+@media (max-width: 479px) {
+	section#portfolio .container-fluid .col-xs-offset-3 {
+		margin-left: 0 !important;
+	}	
+}
