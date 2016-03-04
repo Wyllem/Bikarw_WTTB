@@ -230,6 +230,8 @@
 
 /* XS Portrait */
 @media (max-width: 479px) {
+
+	
   
 	.team-members .col-sm-3, 
 	.pricing-table .col-sm-3, 
@@ -244,4 +246,10 @@
 	section#portfolio .container-fluid .col-xs-offset-3 {
 		margin-left: 0 !important;
 	}	
+}
+
+@media (max-width: 600px) {
+	section#twitter .row {
+		height : 275px !important;
+	}
 }
