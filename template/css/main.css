@@ -9,6 +9,7 @@ body {
   line-height: 24px;
   color: #666;
   background-color: #fff;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -958,6 +959,9 @@ ul.address {
 }
 #footer .social-icons ul li a.twitter:hover {
   background-color: #2ac6f7;
+}
+#footer .social-icons ul li a.instagram:hover {
+  background-color: #8A6E3F;
 }
 #footer .social-icons ul li a.dribbble:hover {
   background-color: #ff5b92;
