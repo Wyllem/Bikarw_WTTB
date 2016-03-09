@@ -88,7 +88,7 @@ a:hover {
 }
 
 section {
-  padding: 90px 0;
+  padding: 1em 0;
 }
 
 .heading {
@@ -332,6 +332,16 @@ section {
 
 #about-us h1 {
   margin-bottom: 30px;
+}
+
+#tcs-cover {
+  background-image: url(../images/tcs-cover.png);
+  height: 25em;
+}
+
+#dtt-cover {
+  background-image: url(../images/dtt-cover.jpg);
+  height: 25em;
 }
 
 .progress{
@@ -988,3 +998,30 @@ ul.address {
 /***************************/
 /*******DIM CSS ************/
 /***************************/
+.quote
+{
+  font-style: normal;
+  font-size: 16px;
+  margin-left: 32px;
+  font-family: Consolas, "Times New Roman", Verdana;
+  /*border-right: 4px solid #CCC;*/
+  padding-left: 8px;
+}
+
+.quoteMaker 
+{
+  font-style: normal;
+  font-size: 19px;
+  margin-left: 40px;
+  font-family: Consolas, "Times New Roman", Verdana;
+  padding-left: 8px;
+}
+
+.font {
+    font-size: 1.375em;
+    line-height: 33px;
+}
+  
+.heading2 {
+  padding-bottom: 1em;
+}
