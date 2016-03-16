@@ -90,3 +90,18 @@ div.footer-bottom {
     height: 35em; 
 
 }
+
+.colorDTT,.colorDTT:hover
+{
+    border-color: #fd4286;
+    background-color: #fd4286;
+    border: 0px;
+    margin-top: 0px;
+    margin-bottom: 1em;
+}
+
+.paf {
+
+    font-size: 2em;
+    padding-top: 0.75em;
+}

@@ -92,7 +92,7 @@ section {
 }
 
 .heading {
-  padding-bottom:90px;
+  padding-bottom:2em;
 }
 
 .preloader {
@@ -102,9 +102,11 @@ section {
   right: 0;
   bottom: 0;
   z-index: 999999;
-  background: #fff;
+  background : url(../images/lightbox/loading.gif) no-repeat 50% 50% #fff;
+  /*background : url(../images/lightbox/giphy.gif) no-repeat 50% 50% #fff;*/
 }
 
+/*
 .preloader > i {
   position: absolute;
   font-size: 36px;
@@ -117,7 +119,10 @@ section {
   margin-left: -15px;
   display: inline-block;
 }
-
+*/
+/*.prealoder > i {
+background : url(../images/lightbox/loading.gif) no-repeat 50% 50%;
+}*/
 
 /*************************
 ********Home CSS**********
@@ -335,13 +340,23 @@ section {
 }
 
 #tcs-cover {
-  background-image: url(../images/tcs-cover.png);
-  height: 25em;
+  background-image: url(../images/tcs-cover.jpg);
+  height: 40em;
 }
 
 #dtt-cover {
   background-image: url(../images/dtt-cover.jpg);
-  height: 25em;
+  height: 42em;
+}
+
+#white-cover {
+  background-image: url(../images/white2-cover.jpg);
+  height: 42em;
+}
+
+#bikini-cover {
+  background-image: url(../images/bikini2.jpg);
+  height: 42em;
 }
 
 .progress{
@@ -1002,7 +1017,6 @@ ul.address {
 {
   font-style: normal;
   font-size: 16px;
-  margin-left: 32px;
   font-family: Consolas, "Times New Roman", Verdana;
   /*border-right: 4px solid #CCC;*/
   padding-left: 8px;
@@ -1012,7 +1026,6 @@ ul.address {
 {
   font-style: normal;
   font-size: 19px;
-  margin-left: 40px;
   font-family: Consolas, "Times New Roman", Verdana;
   padding-left: 8px;
 }
@@ -1025,3 +1038,26 @@ ul.address {
 .heading2 {
   padding-bottom: 1em;
 }
+
+.liveClub {
+background-image:url(../images/logo-liveclub.jpg);
+
+}
+
+hr {
+    display: block;
+    clear: both;
+    height: 1px;
+    background-color: #7e27aa ;/*#AAABD3;*/
+    padding: 0;
+    border: 0;
+    font-family: arial;
+    text-align: center;
+    line-height: 1;
+}
+/*hr:after {
+    content: "\273D \273D \273D";
+    height: 0;      
+    letter-spacing: 1em;
+    color: #aaa;
+}*/

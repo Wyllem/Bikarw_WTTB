@@ -52,3 +52,10 @@ a:hover, a:focus {
 .twitter-icon .fa-twitter:after {
 	border-color: #7e27aa transparent transparent;
 }
+.colorDTT,.colorDTT:hover
+{
+    border-color: #fd4286;
+    background-color: #fd4286;
+    
+    border: 0px;
+}

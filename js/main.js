@@ -3,7 +3,15 @@ jQuery(function($) {
 	//Preloader
 	var preloader = $('.preloader');
 	$(window).load(function(){
-		preloader.remove();
+		preloader.fadeOut(1500);
+		if ($("img.img-responsive").length != 0)
+			$("img.img-responsive").lazyload();
+		
+		if ($('#lazyLoad').length != 0)
+			$('#lazyLoad').lazyload();
+
+		if ($('.lazyLoad').length != 0)
+			$('.lazyLoad').lazyload();
 	});
 
 	//#main-slider
@@ -22,6 +30,11 @@ jQuery(function($) {
 			$('.main-nav').removeClass('navbar-fixed-top');
 		}
 	});
+
+	//Lazy loading
+	$('portfolio').on('displayChanged', function(e,state) {
+      console.log(state);
+});
 	
 	// Navigation Scroll
 	$(window).scroll(function(event) {
@@ -135,6 +148,10 @@ jQuery(function($) {
 	});
 
 	//Google Map
+
+	if ($('#google-map').length == 0)
+		return ;
+
 	var latitude = $('#google-map').data('latitude')
 	var longitude = $('#google-map').data('longitude')
 	function initialize_map() {
@@ -144,26 +161,18 @@ jQuery(function($) {
 			scrollwheel: false,
 			center: myLatlng
 		};
-		//location of the club
-		var inoxClub = {"lat":43.651975, "lng":1.420669};
-		// Setting to build the map
-		var mapSetting = {
-			"zoom": 14,
-			"center": inoxClub
-		};
-	
-		var map = new google.maps.Map(document.getElementById('google-map'), mapSetting);
-		// var contentString = '';
-		// var infowindow = new google.maps.InfoWindow({
-		// 	content: '<div class="map-content"><ul class="address">' + $('.address').html() + '</ul></div>'
-		// });
-		// var marker = new google.maps.Marker({
-		// 	position: myLatlng,
-		// 	map: map
-		// });
-		// google.maps.event.addListener(marker, 'click', function() {
-		// 	infowindow.open(map,marker);
-		// });
+		var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+		var contentString = '';
+		var infowindow = new google.maps.InfoWindow({
+			content: '<div class="map-content"><span class="liveClub"></span><b>LIVE CLUB</b><ul class="address">' + 'Parc de Sesquieres / Allée des Foulques' /*$('.address').html()*/ + '</ul></div>'
+		});
+		var marker = new google.maps.Marker({
+			position: myLatlng,
+			map: map
+		});
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.open(map,marker);
+		});
 	}
 	google.maps.event.addDomListener(window, 'load', initialize_map);
 	
