@@ -4,6 +4,7 @@ jQuery(function($) {
 	var preloader = $('.preloader');
 	$(window).load(function(){
 		preloader.fadeOut(1500);
+		
 		if ($("img.img-responsive").length != 0)
 			$("img.img-responsive").lazyload();
 		
